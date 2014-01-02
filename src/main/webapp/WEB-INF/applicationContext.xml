@@ -35,5 +35,7 @@
 	
     <!-- DAO -->
     <bean class="org.springframework.dao.annotation.PersistenceExceptionTranslationPostProcessor"/>
-    <bean class="com.foilen.quickchat.DAO.MessagesDAOHibernate"/>
+    <bean class="dao.AbstractHibernateDao"/>
+    <bean class="dao.GenericHibernateDao"/>
+ 
 </beans>
