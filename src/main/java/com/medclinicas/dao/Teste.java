@@ -5,7 +5,7 @@
 package com.medclinicas.dao;
 
 import com.medclinicas.entidade.Paciente;
-import org.springframework.beans.factory.annotation.Autowired;
+
 
 /**
  *
@@ -20,7 +20,7 @@ public class Teste {
         // TODO code application logic here
       
 
-        GenericHibernateDao<Paciente> dao = null;
+        IGenericDao<Paciente> dao = null;
         
         Paciente paciente = new Paciente();
         paciente.setNome("djair");
