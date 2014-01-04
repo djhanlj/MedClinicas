@@ -15,7 +15,7 @@ import org.springframework.stereotype.Service;
  *
  * @author 01932121102
  */
-@Service
+
 public abstract class AbstractHibernateDao< T extends Serializable > {
  
    private Class< T > clazz;

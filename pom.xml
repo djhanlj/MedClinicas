@@ -19,12 +19,42 @@
     </properties>
 
     <dependencies>
+    
+    <dependency>
+        <groupId>javax.validation</groupId>
+        <artifactId>validation-api</artifactId>
+        <version>1.0.0.GA</version>
+    </dependency>
+    <dependency>
+        <groupId>org.hibernate</groupId>
+        <artifactId>hibernate-validator</artifactId>
+        <version>4.0.2.GA</version>
+    </dependency>  
+        
+        <dependency>
+            <groupId>com.atomikos</groupId>
+            <artifactId>transactions-jdbc-deprecated</artifactId>
+            <version>3.6.4</version>
+            <type>jar</type>
+        </dependency>
+        
+        <dependency>
+          <groupId>commons-dbcp</groupId>
+          <artifactId>commons-dbcp</artifactId>
+          <version>1.4</version>
+        </dependency>
         
         <dependency>
             <groupId>javax</groupId>
             <artifactId>javaee-web-api</artifactId>
             <version>6.0</version>
             <scope>provided</scope>
+        </dependency>
+        
+        <dependency>
+          <groupId>javax.jms</groupId>
+          <artifactId>jms</artifactId>
+          <version>1.1</version>
         </dependency>
         
         <!-- postgres-->
@@ -69,6 +99,7 @@
             <version>${hibernate.entitymanager.version}</version>
         </dependency>
         
+        
         <!-- SPRING DEPENDENCIES -->
         <dependency>
                 <groupId>org.springframework</groupId>
@@ -80,6 +111,12 @@
                 <artifactId>spring-web</artifactId>
                 <version>${spring.version}</version>
         </dependency>
+        <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-webmvc</artifactId>
+                <version>${spring.version}</version>
+        </dependency>
+        
         <dependency>
                 <groupId>org.springframework</groupId>
                 <artifactId>spring-beans</artifactId>
@@ -120,10 +157,6 @@
                 <artifactId>spring-test</artifactId>
                 <version>${spring.version}</version>
         </dependency>
-
-        
-        
-        
         
     </dependencies>
 
@@ -150,7 +183,7 @@
                      <packagingExcludes>WEB-INF/web.xml</packagingExcludes>
                 </configuration>
             </plugin>
-            <plugin>
+           <!--  --> <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-dependency-plugin</artifactId>
                 <version>2.1</version>
@@ -174,8 +207,14 @@
                         </configuration>
                     </execution>
                 </executions>
-            </plugin>
+            </plugin> <!-- -->
         </plugins>
     </build>
-
+<repositories>
+    <repository>
+      <id>repository.jboss.org-public</id>
+      <name>JBoss.org Maven repository</name>
+      <url>https://repository.jboss.org/nexus/content/groups/public</url>
+    </repository>  
+</repositories>
 </project>

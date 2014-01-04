@@ -5,7 +5,10 @@
 package com.medclinicas.anotacaoClasses;
 
 import com.medclinicas.dao.AbstractHibernateDao;
+import com.medclinicas.dao.CriarBancoDeDados;
 import com.medclinicas.dao.GenericHibernateDao;
+import com.medclinicas.dao.IGenericDao;
+import com.medclinicas.dao1.GenericJpaDao;
 import com.medclinicas.entidade.Paciente;
 import java.util.ArrayList;
 import java.util.List;
@@ -32,9 +35,11 @@ public class AnnotatedClassesFactory{
 	 */
 	private static void adicionarClassesHibernate() {
 		classesHibernate.add(Paciente.class);
-                classesHibernate.add(GenericHibernateDao.class);
-                classesHibernate.add(AbstractHibernateDao.class);
-                
+//		classesHibernate.add(AbstractHibernateDao.class);
+//                classesHibernate.add(GenericHibernateDao.class);
+//                 classesHibernate.add(IGenericDao.class);
+//                classesHibernate.add(CriarBancoDeDados.class);
+//                classesHibernate.add(GenericJpaDao.class);
 	}
 
 	/**
